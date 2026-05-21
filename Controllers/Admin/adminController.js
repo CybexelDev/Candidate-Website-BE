@@ -263,7 +263,7 @@ const createUploadLink = async (
         "Upload link generated",
 
       uploadLink:
-`http://localhost:5173/upload/${token}`,
+`${process.env.FRONTEND_URL}/upload/${token}`,
 
       campaign,
 
