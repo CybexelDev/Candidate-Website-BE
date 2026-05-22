@@ -302,7 +302,7 @@ const getUploadCampaigns = async (
     const activeLinks =
       campaigns.filter(
         (camp) =>
-          camp.isActive &&
+          
           new Date(camp.expiresAt) >
           new Date()
       ).length;
