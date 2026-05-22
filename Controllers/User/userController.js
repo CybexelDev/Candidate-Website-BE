@@ -105,19 +105,15 @@ async (req, res) => {
 
     } = req.body;
 
-    // CHECK DUPLICATE
-    const existingCandidate =
-      await Candidate.findOne({
+   const existingCandidate =
+  await Candidate.findOne({
 
-        campaign:
-          campaign._id,
+    $or: [
+      { email },
+      { mobileNumber },
+    ],
 
-        $or: [
-          { email },
-          { mobileNumber },
-        ],
-
-      });
+  });
 
     if (existingCandidate) {
 
