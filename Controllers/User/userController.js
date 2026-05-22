@@ -154,43 +154,35 @@ async (req, res) => {
 
         relationshipWithEmergency,
 
-     documents: {
+    documents: {
 
   sslcCertificate:
-files?.sslcCertificate?.[0]
-? `/Uploads/${files.sslcCertificate[0].filename}`
-: null,
+    files?.sslcCertificate?.[0]
+      ?.path || null,
 
   higherSecondaryCertificate:
-files?.higherSecondaryCertificate?.[0]
-? `/Uploads/${files.higherSecondaryCertificate[0].filename}`
-: null,
+    files?.higherSecondaryCertificate?.[0]
+      ?.path || null,
 
   degreeCertificate:
-files?.degreeCertificate?.[0]
-? `/Uploads/${files.degreeCertificate[0].filename}`
-: null,
+    files?.degreeCertificate?.[0]
+      ?.path || null,
 
   aadhaarCard:
-files?.aadhaarCard?.[0]
-? `/Uploads/${files.aadhaarCard[0].filename}`
-: null,
+    files?.aadhaarCard?.[0]
+      ?.path || null,
 
   passportPhoto:
-files?.passportPhoto?.[0]
-? `/Uploads/${files.passportPhoto[0].filename}`
-: null,
+    files?.passportPhoto?.[0]
+      ?.path || null,
 
   resume:
-files?.resume?.[0]
-? `/Uploads/${files.resume[0].filename}`
-: null,
+    files?.resume?.[0]
+      ?.path || null,
 
   panCard:
-files?.panCard?.[0]
-? `/Uploads/${files.panCard[0].filename}`
-: null,
-
+    files?.panCard?.[0]
+      ?.path || null,
 },
 
         folderId:
