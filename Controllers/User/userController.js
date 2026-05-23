@@ -217,16 +217,27 @@ new Date(),
 
   } catch (error) {
 
-    console.log(error);
+  console.log(
+    "SUBMIT ERROR:"
+  );
 
-    return res.status(500).json({
+  console.log(error);
 
-      success: false,
-      message: "Server error",
+  console.log(
+    error.message
+  );
 
-    });
+  return res.status(500).json({
 
-  }
+    success: false,
+
+    message:
+      error.message ||
+
+      "Server error",
+
+  });
+}
 };
 
 
