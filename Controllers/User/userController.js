@@ -89,6 +89,8 @@ async (req, res) => {
 
       });
     }
+    console.log(JSON.stringify(req.body, null, 2));
+    console.log(JSON.stringify(req.files, null, 2));
 console.dir(req.body, { depth: null });
 console.dir(req.files, { depth: null });
     const {
