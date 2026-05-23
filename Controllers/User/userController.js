@@ -89,8 +89,8 @@ async (req, res) => {
 
       });
     }
-    console.log(req.body)
-
+console.dir(req.body, { depth: null });
+console.dir(req.files, { depth: null });
     const {
 
       fullName,
