@@ -46,7 +46,7 @@ const candidateSubmissionSchema =
 
         degreeCertificate: {
           type: String,
-          required: true,
+          required: false,
         },
 
         aadhaarCard: {
